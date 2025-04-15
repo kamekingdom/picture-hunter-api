@@ -1,4 +1,4 @@
-# 🐉 Picture Hunter API
+# 🐉 Picture Hunter API (2024)
 
 An experimental multimodal API backend for generating real-time monsters from user-submitted images.  
 Used in the interactive entertainment system **Picture Hunter II**, presented at EC2024.
