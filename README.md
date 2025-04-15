@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+# 🐉 Picture Hunter API
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An experimental multimodal API backend for generating real-time monsters from user-submitted images.  
+Used in the interactive entertainment system **Picture Hunter II**, presented at EC2024.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🎮 Overview
 
-### `npm start`
+**Picture Hunter API** is the backend component of the game *Picture Hunter II*, a real-time, multiplayer, photo-based strategy game.  
+It transforms images submitted by players into monster attributes through a pipeline involving:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📷 Image Captioning via GPT-4o
+- 🌤️ Text Embedding with OpenAI `text-embedding-3`
+- 🧠 Semantic mapping to in-game stats (HP, ATK, SPEED, DPS)
+- 📃 Real-time storage and syncing via Firestore
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This API enables the connection between the physical world and the digital battlefield.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🧠 Core Concepts
 
-### `npm run build`
+- **Player-oriented input**: Players submit real-world photos to influence in-game outcomes.
+- **Balanced mapping**: Combines *predictability* and *surprise* to maintain engagement.
+- **Multimodal AI**: Leverages strengths and weaknesses of LLMs (e.g., hallucinations) as gameplay elements.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛏 System Architecture
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```text
+Player Image
+   │
+   ├─▶ GPT-4o (Caption Generation)
+   │
+   ├─▶ Embedding (OpenAI Text-Embedding-3)
+   │
+   ├─▶ Vector Mapping → Game Stats (HP, ATK, DPS...)
+   │
+   └─▶ Store to Firebase Firestore
+                 │
+                 ▼
+           React-based Frontend renders live
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🔧 Tech Stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **LLM**: OpenAI GPT-4o
+- **Embedding Model**: `text-embedding-3` (OpenAI)
+- **Storage / Sync**: Firebase Firestore
+- **Framework**: Python (Flask or FastAPI recommended)
+- **Deployment**: Cloud Functions (GCP), or your own server
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 🛆 Example API Usage (pseudo-code)
 
-## Learn More
+```bash
+POST /generate-monster
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+{
+  "image_base64": "...",
+  "team_id": "kanto"
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Response:**
 
-### Code Splitting
+```json
+{
+  "name": "Flame Basilisk",
+  "caption": "A fiery lizard coiled in red smoke",
+  "stats": {
+    "hp": 1200,
+    "atk": 300,
+    "speed": 1.6,
+    "dps": 250
+  }
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🌐 Live Demo (Frontend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The frontend client is deployed here:  
+🔗 https://picture-hunter2.web.app/  
+(Accessible only during event sessions or via partner keys)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📒 Academic Reference
 
-### Advanced Configuration
+This project is part of the research presented at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> **Entertainment Computing Symposium 2024 (EC2024)**  
+> *“Picture Hunter II: A Real-Time Participatory Game Using Multimodal LLM-Based Monster Generation”*  
+> 📘 Authors: Yudai Nakamura, Hiroyoshi Miwa, Sunao Hirano, Haruhiro Katayose
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 💡 Future Plans
 
-### `npm run build` fails to minify
+- Add monster evolution logic & leveling system
+- Improve numeric stability in LLM outputs
+- Integrate text-to-image (e.g., DALL·E) for visuals
+- Add embedding-based clustering for monster types
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+Made with 🧠 & 🐉 by [@kamekingdom](https://github.com/kamekingdom)
+
