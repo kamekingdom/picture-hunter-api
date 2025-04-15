@@ -5,6 +5,8 @@ Used in the interactive entertainment system **Picture Hunter II**, presented at
 
 ---
 
+![Main Interface](https://firebasestorage.googleapis.com/v0/b/kame-tech-lab.appspot.com/o/projects%2Fpicture-hunter-2%2Fmain_image?alt=media&token=f907ede5-b6de-44fa-9cd7-aca578899bcc)
+
 ## 🎮 Overview
 
 **Picture Hunter API** is the backend component of the game *Picture Hunter II*, a real-time, multiplayer, photo-based strategy game.  
