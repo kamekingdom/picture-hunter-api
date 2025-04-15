@@ -14,7 +14,7 @@ cred = credentials.ApplicationDefault()
 firebase_admin.initialize_app(cred)
 
 # OpenAI APIキーを環境変数から取得
-API_KEY = "sk-proj-I4njYBuZsxE7Ir5K60W7T3BlbkFJn2HLX7YQXEp0W5nOy3dA"
+API_KEY = "sk-proj-your-api-key"
 openai.api_key = API_KEY
 
 @https_fn.on_request(
