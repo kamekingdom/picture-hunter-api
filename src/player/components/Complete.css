@@ -1,0 +1,114 @@
+.complete-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.complete-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./images/bgImage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.4;
+    /* 透明度をここで調整 */
+    z-index: -1;
+}
+
+.complete-title {
+    background-color: white;
+    border-radius: 30px;
+    border: 10px solid gray;
+    padding: 10px 40px;
+    font-size: 64px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.complete-photo {
+    background: black;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border: 4px solid gray;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    object-fit: contain;
+}
+
+/* 
+.preview-photo {
+    max-width: 80%;
+    margin-bottom: 5%;
+    height: auto;
+    object-fit: contain;
+    border: 4px solid gray;
+    border-radius: 20px;
+}
+*/
+
+.photo-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.small-image {
+    background-color: #ffffff;
+    position: absolute;
+    bottom: 50px;
+    right: 145px;
+    width: 250px;
+    /* 画像の大きさを調整 */
+    height: auto;
+    border: 10px solid #ddd;
+    border-radius: 3px;
+}
+
+.add-image-path {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 10px;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+.overlay-button {
+    position: absolute;
+    top: 72%;
+    /* 画像の指定された位置に配置 */
+    left: 72%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 10px solid gray;
+    color: black;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    z-index: 10;
+    /* ボタンが他の要素よりも前面に表示されるように設定 */
+    pointer-events: auto;
+    /* クリックを許可 */
+}
+
+.overlay-button-content {
+    position: relative;
+    top: 0%;
+    /* 上に10%移動 */
+    color: gray;
+    font-size: 86px;
+    font-weight: bold;
+}

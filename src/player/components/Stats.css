@@ -1,0 +1,134 @@
+.stats-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background-color: white;
+    border: 10px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.stat-label {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-value {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.stat-value {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.box27 {
+    position: relative;
+    margin: 2em 0;
+    padding: 0.5em 1em;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    min-width: 400px;
+    margin-bottom: 40px;
+}
+
+
+/* Border color class */
+.box27.border-green {
+    border: solid 10px green;
+}
+
+.box27.border-red {
+    border: solid 10px red;
+}
+
+.box27.border-blue {
+    border: solid 10px blue;
+}
+
+.box27.border-purple {
+    border: solid 10px purple;
+}
+
+
+.box27 .box-title {
+    position: absolute;
+    display: inline-block;
+    top: -60px;
+    left: -10px;
+    padding: 0px 20px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 42px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+
+/* Title background color class */
+.box27 .box-title.bg-green {
+    background: green;
+}
+
+.box27 .box-title.bg-red {
+    background: red;
+}
+
+.box27 .box-title.bg-blue {
+    background: blue;
+}
+
+.box27 .box-title.bg-purple {
+    background: purple;
+}
+
+.box27 p {
+    text-align: center;
+    font-size: 64px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.box30 {
+    width: 700px;
+    min-width: 400px;
+    min-height: 100px;
+    margin: 2em 0;
+    background: var(--bg-red-color);
+}
+
+.box30 .box-title {
+    font-size: 56px;
+    background: var(--base-red-color);
+    padding: 4px;
+    text-align: center;
+    color: #FFF;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.box30 p {
+    font-size: 64px;
+    text-align: center;
+    font-weight: 900;
+    padding: 15px 19px;
+    color: black;
+    margin: 0;
+}
+
+/* Complete.css */
+.stat-increasing {
+    color: red;
+}

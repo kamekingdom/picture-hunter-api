@@ -1,0 +1,144 @@
+.camera-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+.camera-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('./images/bgImage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.4;
+    /* 透明度をここで調整 */
+    z-index: -1;
+}
+
+.camera-header {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: flex-start; */
+    /* margin-bottom: 16px; */
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.camera-label {
+    background-color: white;
+    color: black;
+    font-size: 64px;
+    font-weight: bold;
+    border: 10px solid gray;
+    border-radius: 10px;
+    padding: 20px 90px;
+    margin-bottom: 30%;
+}
+
+.camera-select {
+    margin-top: 5%;
+    font-size: 36px;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    border: 5px solid gray;
+    border-radius: 10px;
+    color: #333;
+    outline: none;
+    cursor: pointer;
+}
+
+.camera-select:hover {
+    background-color: white;
+}
+
+.camera-video {
+    background: black;
+    width: 90%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border: 4px solid gray;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.crosshair {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    transform: translate(-50%, -80%);
+    /* カメラの位置調整 */
+    background: url('./images/crosshair.png') no-repeat center center;
+    background-size: contain;
+}
+
+.camera-button-container {
+    position: relative;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 100%;
+    max-width: 800px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: transparent;
+}
+
+.camera-button {
+    width: 80%;
+    /* 幅を調整して左右に余白を作る */
+    max-width: 600px;
+    height: 120px;
+    background: gray;
+    color: white;
+    /* border: 10px solid white; */
+    border-radius: 20px;
+    /* ボタンを半円に */
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10%;
+    /* ボタンの下に余白を追加 */
+}
+
+/* .camera-button:hover {
+    background: gray;
+    color: white
+} */
+
+.hidden {
+    display: none;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 800px;
+}
+
+
+.preview-button:hover {
+    background: #ff85c1;
+}

@@ -1,0 +1,206 @@
+html,
+body,
+#root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* 親コンテナにスクロール可能なスタイルを追加 */
+.ranking-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* 上部からスタートするように調整 */
+    align-items: center;
+    height: 100vh;
+    /* 親コンテナの高さをビュー全体に */
+    overflow-y: auto;
+    /* 垂直方向にスクロール可能に */
+    background-color: #4a148c;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.qr-code-container {
+    margin-bottom: 20px;
+}
+
+.qr-code-large {
+    width: 300px;
+    /* 必要に応じてサイズ調整 */
+    height: 300px;
+    object-fit: contain;
+}
+
+.ranking-items-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.ranking-item {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 20%;
+    min-width: 250px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.ranking-item:hover {
+    transform: translateY(-10px);
+}
+
+.ranking-position {
+    position: absolute;
+    top: -30px;
+    left: -15px;
+    background-color: #ffd700;
+    color: #ffffff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.rank-1 .ranking-position {
+    background-color: #ffd700;
+}
+
+.rank-2 .ranking-position {
+    background-color: #c0c0c0;
+}
+
+.rank-3 .ranking-position {
+    background-color: #cd7f32;
+}
+
+.monster-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px 0;
+    border: 3px solid #eee;
+}
+
+.loading-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.ranking-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.ranking-total-stats {
+    font-size: 32px;
+    color: rgb(214, 33, 20);
+    margin: 5px 0 15px 0;
+}
+
+.monster-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.monster-stats div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.monster-stats span {
+    font-weight: 600;
+    color: #333;
+}
+
+.box5 {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    border: double 5px #4ec4d3;
+}
+
+.box5 p {
+    color: white;
+    font-size: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.lower-ranking-items-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    width: 90%;
+    /* 必要に応じて調整 */
+}
+
+.lower-ranking-item {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 15%;
+    min-width: 150px;
+    /* サイズを小さく設定 */
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.lower-ranking-position {
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.lower-monster-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 5px 0;
+    border: 2px solid #eee;
+}
+
+.lower-ranking-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #333;
+}
+
+.lower-ranking-total-stats {
+    font-size: 18px;
+    color: rgb(214, 33, 20);
+    margin: 5px 0;
+}

@@ -1,0 +1,64 @@
+.submit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('./images/bgImage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+.submit-container h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.keywords-container p {
+    opacity: 0.3;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.keywords-container p.highlight {
+    opacity: 1;
+}
+
+.radar-chart-container {
+    width: 600px;
+    /* 横幅を600pxに設定 */
+    height: 600px;
+    /* 高さを600pxに設定 */
+    margin: 0 auto;
+    /* 中央揃え */
+}
+
+.similarity-score {
+    font-size: 3rem;
+    /* 倍率を大きく表示 */
+    font-weight: bold;
+    /* 太字にして強調 */
+    color: #ff5722;
+    /* 明るい色で目立たせる */
+    text-align: center;
+    /* 中央に配置 */
+    background-color: #ffffff;
+    /* 背景色を白に */
+    padding: 20px;
+    /* パディングを追加して余白を確保 */
+    border-radius: 10px;
+    /* 角を丸める */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* 影をつけて立体感を追加 */
+    display: inline-block;
+    /* インラインブロックでサイズに応じて縮小 */
+    margin: 20px auto;
+    /* 上下に余白を追加し、中央に配置 */
+}
+
+/* スペースを確保するためのスタイルを追加 */
+.spacing {
+    margin-top: 100px;
+    /* 必要に応じて調整 */
+    margin-bottom: 20px;
+    /* 必要に応じて調整 */
+}

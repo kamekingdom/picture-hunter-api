@@ -1,0 +1,60 @@
+:root {
+    --tower-width: 100px;
+    --tower-height: 200px;
+    --monster-width: 100px;
+    --left-tower-position: 0;
+    --right-tower-position: calc(100vw - var(--tower-width));
+    --ground-height: 50px;
+    --left-monster-color: ;
+    --right-monster-color: ;
+}
+
+.monster {
+    position: absolute;
+    width: var(--monster-width);
+    height: var(--monster-width);
+}
+
+.tower {
+    position: absolute;
+    width: var(--tower-width);
+    height: var(--tower-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.tower-left {
+    left: var(--left-tower-position);
+    top: calc(50% - var(--tower-height) / 2);
+}
+
+.tower-right {
+    right: var(--left-tower-position);
+    top: calc(50% - var(--tower-height) / 2);
+}
+
+.ground {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: var(--ground-height);
+    top: calc(50% + var(--tower-height) / 2);
+    background-color: #8b4513;
+    /* 地面の色 */
+}
+
+.battlefield-canvas {
+    background-color: #e9fbfe;
+}
+
+.battlefield-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    /* UI要素がクリックなどを受けないようにする場合 */
+}

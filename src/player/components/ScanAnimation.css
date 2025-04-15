@@ -1,0 +1,44 @@
+.photo-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.photo-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.scan-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background-color: red;
+    animation: scan 2s linear infinite alternate;
+}
+
+@keyframes scan {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 95%;
+    }
+}
+
+.preview-photo {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border: 4px solid gray;
+    border-radius: 20px;
+    object-fit: contain;
+}
