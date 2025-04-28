@@ -86,7 +86,7 @@ POST /generate-monster
 
 ---
 
-## Live Demo (Frontend)
+## Live URL
 
 The frontend client is deployed here:  
 🔗 https://picture-hunter-api.web.app/
