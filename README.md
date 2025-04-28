@@ -1,4 +1,4 @@
-# 🐉 Picture Hunter API (2024)
+# Picture Hunter API (2024)
 
 An experimental multimodal API backend for generating real-time monsters from user-submitted images.  
 Used in the interactive entertainment system **Picture Hunter II**, presented at EC2024.
@@ -7,21 +7,21 @@ Used in the interactive entertainment system **Picture Hunter II**, presented at
 
 ![Main Interface](https://firebasestorage.googleapis.com/v0/b/kame-tech-lab.appspot.com/o/projects%2Fpicture-hunter-2%2Fmain_image?alt=media&token=f907ede5-b6de-44fa-9cd7-aca578899bcc)
 
-## 🎮 Overview
+## Overview
 
 **Picture Hunter API** is the backend component of the game *Picture Hunter II*, a real-time, multiplayer, photo-based strategy game.  
 It transforms images submitted by players into monster attributes through a pipeline involving:
 
-- 📷 Image Captioning via GPT-4o
-- 🌤️ Text Embedding with OpenAI `text-embedding-3`
-- 🧠 Semantic mapping to in-game stats (HP, ATK, SPEED, DPS)
-- 📃 Real-time storage and syncing via Firestore
+- Image Captioning via GPT-4o
+- Text Embedding with OpenAI `text-embedding-3`
+- Semantic mapping to in-game stats (HP, ATK, SPEED, DPS)
+- Real-time storage and syncing via Firestore
 
 This API enables the connection between the physical world and the digital battlefield.
 
 ---
 
-## 🧠 Core Concepts
+## Core Concepts
 
 - **Player-oriented input**: Players submit real-world photos to influence in-game outcomes.
 - **Balanced mapping**: Combines *predictability* and *surprise* to maintain engagement.
@@ -29,7 +29,7 @@ This API enables the connection between the physical world and the digital battl
 
 ---
 
-## 🛏 System Architecture
+## System Architecture
 
 ```text
 Player Image
@@ -48,7 +48,7 @@ Player Image
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 - **LLM**: OpenAI GPT-4o
 - **Embedding Model**: `text-embedding-3` (OpenAI)
@@ -58,7 +58,7 @@ Player Image
 
 ---
 
-## 🛆 Example API Usage (pseudo-code)
+## Example API Usage (pseudo-code)
 
 ```bash
 POST /generate-monster
@@ -86,7 +86,7 @@ POST /generate-monster
 
 ---
 
-## 🌐 Live Demo (Frontend)
+## Live Demo (Frontend)
 
 The frontend client is deployed here:  
 🔗 https://picture-hunter2.web.app/  
@@ -94,17 +94,17 @@ The frontend client is deployed here:
 
 ---
 
-## 📒 Academic Reference
+## Academic Reference
 
 This project is part of the research presented at:
 
 > **Entertainment Computing Symposium 2024 (EC2024)**  
 > *“Picture Hunter II: A Real-Time Participatory Game Using Multimodal LLM-Based Monster Generation”*  
-> 📘 Authors: Yudai Nakamura, Hiroyoshi Miwa, Sunao Hirano, Haruhiro Katayose
+> Authors: Yudai Nakamura, Hiroyoshi Miwa, Sunao Hirano, Haruhiro Katayose
 
 ---
 
-## 💡 Future Plans
+## Future Plans
 
 - Add monster evolution logic & leveling system
 - Improve numeric stability in LLM outputs
@@ -113,11 +113,10 @@ This project is part of the research presented at:
 
 ---
 
-## 📄 License
+## License
 
 MIT License
 
 ---
 
-Made with 🧠 & 🐉 by [@kamekingdom](https://github.com/kamekingdom)
-
+Made by [@kamekingdom](https://github.com/kamekingdom)
