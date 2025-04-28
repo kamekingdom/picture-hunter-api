@@ -90,6 +90,7 @@ POST /generate-monster
 
 The frontend client is deployed here:  
 🔗 https://picture-hunter-api.web.app/
+
 The player screen is deployed here:  
 🔗 https://picture-hunter-api.web.app/player/team#no-back
 
