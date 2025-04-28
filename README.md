@@ -89,8 +89,9 @@ POST /generate-monster
 ## Live Demo (Frontend)
 
 The frontend client is deployed here:  
-🔗 https://picture-hunter-api.web.app/  
-(Accessible only during event sessions or via partner keys)
+🔗 https://picture-hunter-api.web.app/
+The player screen is deployed here:  
+🔗 https://picture-hunter-api.web.app/player/team#no-back
 
 ---
 
